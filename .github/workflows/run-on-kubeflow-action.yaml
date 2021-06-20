@@ -1,0 +1,13 @@
+on: push
+jobs:
+  kubeflow-upload:
+    runs-on: ubuntu-latest
+    container: node:13.5.0-alpine3.10
+    steps:
+      - uses: actions/checkout@v2 
+      - uses: ./.github/actions/run_in_kubeflow
+        id: kubeflow
+        with:
+          file: "sequential.py"
+      - run: |
+         echo " Pipline: ${{ steps.kubeflow.outputs.pipeline-name}}"

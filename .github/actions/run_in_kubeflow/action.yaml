@@ -1,0 +1,14 @@
+name: kubeflow
+author: maik bialas
+description: compiles a pipelines file and upload it to kubeflow
+inputs:
+  file:
+    description: "python files which describes the piplines"
+    required: true
+outputs:
+  status:
+    pipeline-name:
+      description: "name of pipline in kubeflow" 
+runs:
+  using: "node12"
+  main: "dist/index.js"
