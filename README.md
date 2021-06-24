@@ -1,4 +1,4 @@
-# Github action to upload a kubeflow pipline
+# Github action to upload a kubeflow pipeline
 
 
 ### install  act
