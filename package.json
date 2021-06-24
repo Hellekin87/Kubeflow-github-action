@@ -11,6 +11,8 @@
   "devDependencies": {
     "@actions/core": "^1.4.0",
     "@actions/github": "^5.0.0",
-    "@zeit/ncc": "^0.22.3"
+    "@zeit/ncc": "^0.22.3",
+    "axios": "^0.21.1",
+    "form-data": "^4.0.0"
   }
 }

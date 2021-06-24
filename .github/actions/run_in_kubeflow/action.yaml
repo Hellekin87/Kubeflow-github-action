@@ -3,7 +3,13 @@ author: maik bialas
 description: compiles a pipelines file and upload it to kubeflow
 inputs:
   file:
-    description: "python files which describes the piplines"
+    description: "python file which describes the pipline"
+    required: true
+  pipline-service-endpoint:
+    description: "api-server url or ip"
+    required: true
+  pipline-name:
+    description: "name of uploaded pipline"
     required: true
 outputs:
   status:

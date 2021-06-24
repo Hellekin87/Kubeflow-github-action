@@ -1,13 +1,32 @@
+env:
+  python-file: 'sequential.py'
+  pipline-service-endpoint: 'http://22303ced7a98.ngrok.io'
+  pipline-name: 'sequential'
+
 on: push
 jobs:
   kubeflow-upload:
     runs-on: ubuntu-latest
-    container: node:13.5.0-alpine3.10
+    container: mabi/kubeflowaction:latest
+    run:
+      shell: sh
     steps:
       - uses: actions/checkout@v2 
+
+      - name: compile-file
+        shell: sh
+        run: |
+          dsl-compile --py ${{ env.python-file }} --output ${{ env.python-file }}.tar.gz
+          
       - uses: ./.github/actions/run_in_kubeflow
         id: kubeflow
         with:
-          file: "sequential.py"
-      - run: |
-         echo " Pipline: ${{ steps.kubeflow.outputs.pipeline-name}}"
+          file: ${{ env.python-file }}.tar.gz
+          pipline-service-endpoint: ${{ env.pipline-service-endpoint }}
+          pipline-name: ${{ env.pipline-name }}
+
+      - name: get-ouputs
+        shell: sh
+        run: |
+         echo "Pipline: ${{ steps.kubeflow.outputs.pipeline-name }}"
+
