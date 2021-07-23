@@ -2161,7 +2161,7 @@ module.exports = require("assert");
 /***/ 361:
 /***/ (function(module) {
 
-module.exports = {"name":"axios","version":"0.21.1","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test && bundlesize","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://github.com/axios/axios","devDependencies":{"bundlesize":"^0.17.0","coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.0.2","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^20.1.0","grunt-karma":"^2.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^1.0.18","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^1.3.0","karma-chrome-launcher":"^2.2.0","karma-coverage":"^1.1.1","karma-firefox-launcher":"^1.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-opera-launcher":"^1.0.0","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^1.2.0","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.7","karma-webpack":"^1.7.0","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^5.2.0","sinon":"^4.5.0","typescript":"^2.8.1","url-search-params":"^0.10.0","webpack":"^1.13.1","webpack-dev-server":"^1.14.1"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.10.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]};
+module.exports = {"_args":[["axios@0.21.1","/Users/uia81723/Desktop/Kubeflow-github-action"]],"_development":true,"_from":"axios@0.21.1","_id":"axios@0.21.1","_inBundle":false,"_integrity":"sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.21.1","name":"axios","escapedName":"axios","rawSpec":"0.21.1","saveSpec":null,"fetchSpec":"0.21.1"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.1.tgz","_spec":"0.21.1","_where":"/Users/uia81723/Desktop/Kubeflow-github-action","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.10.0"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"bundlesize":"^0.17.0","coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.0.2","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^20.1.0","grunt-karma":"^2.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^1.0.18","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^1.3.0","karma-chrome-launcher":"^2.2.0","karma-coverage":"^1.1.1","karma-firefox-launcher":"^1.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-opera-launcher":"^1.0.0","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^1.2.0","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.7","karma-webpack":"^1.7.0","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^5.2.0","sinon":"^4.5.0","typescript":"^2.8.1","url-search-params":"^0.10.0","webpack":"^1.13.1","webpack-dev-server":"^1.14.1"},"homepage":"https://github.com/axios/axios","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test && bundlesize","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.1"};
 
 /***/ }),
 
@@ -10448,7 +10448,7 @@ try {
     const formData = new FormData()
     formData.append('uploadfile', fs.createReadStream(file));
 
-   const params = new URLSearchParams({
+    const params = new URLSearchParams({
         "name": piplineName,
         "description": "Pipeline create by github action" 
     }).toString();
@@ -10461,56 +10461,8 @@ try {
         console.log("id:", response.data.default_version)
         let piplineData = response.data.default_version
         console.log("piplineData:", piplineData)
-
-
-        const params = JSON.stringify({
-
-        "name": "startedbygithubaction",
-            
-        "pipeline_spec":  {"parameters": piplineData.parameters},
-        "resource_references":[{"key":{"id":"731c9b89-87aa-4f32-b758-4cd1bc802194","type":"EXPERIMENT"},"relationship":"OWNER"},{"key":{"id":"98929a0d-9b11-47b9-ac66-5c113fb0fa37","type":"PIPELINE_VERSION"},"relationship":"CREATOR"}]
-            
-        });
-
-    
-
-        console.log("params:", params)
-
-        // curl 'http://192.168.188.230/pipeline/apis/v1beta1/runs' \
-        // -H 'Connection: keep-alive' \
-        // -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36 OPR/77.0.4054.90' \
-        // -H 'Content-Type: application/json' \
-        // -H 'Accept: */*' \
-        // -H 'Origin: http://192.168.188.230' \
-        // -H 'Referer: http://192.168.188.230/pipeline/' \
-        // -H 'Accept-Language: de-DE,de;q=0.9,en-US;q=0.8,en;q=0.7' \
-        // -H 'Cookie: _xsrf=2|520cf1b9|b5f7cfd82ad7ca7bdd64a67b841a51af|1624100438; authservice_session=MTYyNDU2MTExNnxOd3dBTkZCSk4xQlNUMEpWUkVoS1UwZERVbFV6UjFSQlZrcExUVVUwVTBOVk4wZzNORVJJVWpWVlJrOUxVVXBTUmpKRVFUTkpSMUU9fBl2FEce3uNDnQHdH30KEIt6OzwK-LPIl32zmMZEm_wo' \
-        // --data-raw '{"description":"","name":"myrun","pipeline_spec":{"parameters":[{"name":"url","value":"gs://ml-pipeline/sample-data/shakespeare/shakespeare1.txt"}]},"resource_references":[{"key":{"id":"731c9b89-87aa-4f32-b758-4cd1bc802194","type":"EXPERIMENT"},"relationship":"OWNER"},{"key":{"id":"98929a0d-9b11-47b9-ac66-5c113fb0fa37","type":"PIPELINE_VERSION"},"relationship":"CREATOR"}],"service_account":""}' \
-        // --compressed \
-
-        // "resource_references":[{"key":{"type":"PIPELINE","id":"7f49625a-1688-4bb9-8405-fc851f2fa209"},"relationship":"OWNER"}]}
-
-        // "resource_references":[{"key":{"id":"731c9b89-87aa-4f32-b758-4cd1bc802194","type":"EXPERIMENT"},"relationship":"OWNER"},{"key":{"id":"98929a0d-9b11-47b9-ac66-5c113fb0fa37","type":"PIPELINE_VERSION"},"relationship":"CREATOR"}]
-
-
-        // --insecure
-
-        // params: {"name":"myrun","pipeline_spec":{"parameters":[{"name":"url","value":"gs://ml-pipeline/sample-data/shakespeare/shakespeare1.txt"}]},"resource_references":[{"key":{"type":"PIPELINE","id":"7f49625a-1688-4bb9-8405-fc851f2fa209"},"relationship":"OWNER"}]}
-       
-        var url = `${piplineServiceEndpoint}/apis/v1beta1/runs` 
-        axios.post(url, params)
-        .then(response => {
-            console.log("response:", response)        
-        })
-        .catch(errors => console.log(errors));
-
-            
-
-        
     })
-    .catch(errors => console.log(errors));
-
-    
+    .catch(errors => console.log(errors)); 
 
     core.setOutput("pipeline-name", piplineName)
 

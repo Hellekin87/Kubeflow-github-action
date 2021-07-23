@@ -1,6 +1,6 @@
 env:
   python-file: 'sequential.py'
-  pipline-service-endpoint: 'http://22303ced7a98.ngrok.io'
+  pipline-service-endpoint: 'http://pipelines.bialas.ddnss.org'
   pipline-name: 'sequential'
 
 on: push
