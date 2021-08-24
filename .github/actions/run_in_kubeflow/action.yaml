@@ -8,7 +8,7 @@ inputs:
   pipline-service-endpoint:
     description: "api-server url or ip"
     required: true
-  pipline-name:
+  pipeline-name:
     description: "name of uploaded pipline"
     required: true
 outputs:
