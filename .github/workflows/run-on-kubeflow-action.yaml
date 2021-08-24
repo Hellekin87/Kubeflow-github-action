@@ -27,5 +27,3 @@ jobs:
         shell: sh
         run: |
          echo "Pipline: ${{ steps.kubeflow.outputs.pipeline-name }}"
-
-
