@@ -13,7 +13,6 @@ inputs:
     required: true
 outputs:
   status:
-    pipeline-name:
       description: "name of pipline in kubeflow" 
 runs:
   using: "node12"
