@@ -8,8 +8,6 @@ jobs:
   kubeflow-upload:
     runs-on: ubuntu-latest
     container: mabi/kubeflowaction:latest
-    run:
-      shell: sh
     steps:
       - uses: actions/checkout@v2 
 
